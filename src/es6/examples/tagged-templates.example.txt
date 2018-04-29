@@ -1,0 +1,22 @@
+function dogSizeTag(
+  strings,
+  weight,
+  uppercase
+) {
+  const [str1, str2] = strings;
+  let dogSize;
+  if (weight < 20) {
+    dogSize = 'small';
+  } else if (weight < 70) {
+    dogSize = 'medium';
+  } else {
+    dogSize = 'large';
+  }
+  const result = `${str1}${dogSize}${str2}`;
+  if (uppercase) return result;
+  return result.toUpperCase();
+}
+
+const result = dogSizeTag`My dog size is ${140}. His name is Bonfire!${true}`
+
+console.log(result);

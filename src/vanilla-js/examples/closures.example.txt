@@ -1,0 +1,32 @@
+function createNameLogger() {
+  const name = 'Bonfire';
+  return function logger() => console.log(name);
+}
+
+const logName = createNameLogger();
+
+logName();
+
+const add = val1 => val2 => val1 + val2;
+
+const add2 = add(2);
+
+console.log(add2(10));
+
+const multiply = val1 => val2 => val1 * val2;
+
+const multiplyBy5 = multiply(5);
+
+console.log(multiplyBy5(100));
+
+const compose = (...fns) => {
+  return val => fns
+    .reverse()
+    .reduce((acc, curr) => curr(acc), val);
+}
+
+const add2AndMultiplyBy5 = compose(multiplyBy5, add2);
+
+console.log(add2AndMultiplyBy5(10));
+
+console.log(add2AndMultiplyBy5(20));

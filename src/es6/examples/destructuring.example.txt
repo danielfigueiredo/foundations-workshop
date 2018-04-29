@@ -1,0 +1,24 @@
+const myArray = ['a', 'b', 'c', 'd'];
+
+const [firstElement, secondElement] = myArray;
+
+const [, secondEl, thirdEl] = [1, 2, 3, 4, 5];
+
+const [letterA, ...otherLetters] = myArray;
+
+const [a = 5, b = 10] = [1];
+
+const [a = 5, b = 10] = [];
+
+const myObj = { a: 1, b: true };
+
+const { a, b } = myObj;
+
+const { a:newA, b:newB } = myObj;
+
+const validityObj = { isValid: true };
+const { isValid = false, name = 'Adoy' } = validityObj;
+
+const key = 'name';
+
+const { [key]: name } = { name: ' Adoy' };

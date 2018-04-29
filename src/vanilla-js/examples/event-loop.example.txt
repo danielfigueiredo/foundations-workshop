@@ -1,0 +1,14 @@
+const startSecond = new Date().getSeconds();
+let currentSecond;
+
+setTimeout(function() {
+  console.log(`Ran after ${new Date().getSeconds() - startSecond} seconds`);
+}, 500);
+
+while(true) {
+  currentSecond = new Date().getSeconds();
+  if(currentSecond - startSecond >= 5) {
+    console.log('Looped for 5 seconds');
+    break;
+  }
+}

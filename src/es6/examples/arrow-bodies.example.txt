@@ -1,0 +1,45 @@
+const myArrowFunction = () => {
+  return true;
+};
+
+function myRegularFunction() {
+  return true;
+}
+
+const arrowReturnExpression = (x) => x !== 10;
+
+arrowReturnExpression(5);
+
+
+class MyService {
+
+  constructor() {
+    this._makeCall = fetch;
+  }
+
+  makeCall(url) {
+    return this._makeCall({ url });
+  }
+
+  makeCallArrow = (url) => {
+    return this._makeCall({ url });
+  }
+
+}
+
+
+const myService = new MyService();
+
+myService.makeCall('https://myapi.com/users');
+
+const callRef = myService.makeCall;
+
+callRef('https://myapi.com/agents');
+
+const arrowRef = myService.makeCallArrow;
+
+arrowRef('https://myapi.com/policies');
+
+const boundRef = makeCallRef.bind(myService);
+
+boundRef('https://myapi.com/users');

@@ -1,0 +1,45 @@
+const middle = [3, 4];
+
+const myArray = [1, 2, middle, 5, 6];
+
+console.log(myArray);
+
+const myArray = [1, 2, ...middle, 5, 6];
+
+console.log(myArray);
+
+function anyArguments(...args) {
+  args.forEach(arg => evaluate(arg));
+}
+
+anyArguments(1, 2, 3);
+anyArguments(true, 'asd');
+anyArguments({a: 'a'}, [1, 2, 3]);
+
+const myArray = [true, false, 1];
+anyArguments(...myArray);
+anyArguments(myArray);
+
+const myObj = { a: 'a', b: 'b' };
+
+const myObjClone = { ...myObj };
+
+console.log(myObjClone);
+
+console.log(myObj === myObjClone);
+
+const myNewObj = {
+  ...myObj,
+  d: 1,
+  c: true,
+  a: 'aa'
+}
+
+const recordObj = {
+  d: 1,
+  c: true,
+  oldObj: {
+    ...myObj,
+    a: 'aaa',
+  }
+};

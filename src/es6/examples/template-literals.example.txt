@@ -1,0 +1,15 @@
+`Always pass on what you have learned`
+
+'Always pass on what you have learned'
+
+
+const name = 'Lucy Landwalker';
+
+`Hi ${name}`;
+
+'Hi' + name';
+
+`Difficult to see.
+Always in motion is the future`
+
+'Difficult to see.\nAlways in motion is the future'

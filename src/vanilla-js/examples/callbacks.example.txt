@@ -1,0 +1,20 @@
+function synchronousCallback(value, callback) {
+  const newValue = { ...value, newProp: 1 };
+  callback(newValue);
+}
+
+synchronousCallback({ mockProp: true }, (newValue) => {
+  console.log(newValue);
+});
+
+
+const asynchronousCallback = (timer, callback) => {
+  setTimeout(() => {
+    doStuff();
+    callback();
+  }, timer);
+};
+
+asynchronousCallback(2000, () => {
+  console.log('I was called at least 2000ms after');
+});

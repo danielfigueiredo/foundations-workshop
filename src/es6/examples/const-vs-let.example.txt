@@ -1,0 +1,19 @@
+const foo = 'foo';
+
+foo = 'bar';
+
+const barObj = {
+  bar: 1
+};
+
+barObj.bar = 10;
+
+barObj = {};
+
+let reassignMe = 'string value';
+
+reassignMe = 1;
+reassignMe = {};
+reassignMe = [1, 'a', {}];
+
+
