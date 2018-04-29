@@ -1,10 +1,4 @@
-/* PrismJS 1.14.0
-http://prismjs.com/download.html#themes=prism-dark&languages=markup+clike+javascript */
-/**
- * prism.js Dark theme for JavaScript, CSS and HTML
- * Based on the slides of the talk “/Reg(exp){2}lained/”
- * @author Lea Verou
- */
+/* Manually import prism css so that code highlight codes as expected */
 
 code[class*="language-"],
 pre[class*="language-"] {
@@ -129,6 +123,7 @@ pre[class*="language-"] {
 	color: red;
 }
 
+/* Force override border colour of heading to match theme */
 h1 {
 	border-color: #e5373a!important;
 }

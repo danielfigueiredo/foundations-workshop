@@ -1,0 +1,24 @@
+interface Store<T> {
+	state: T;
+	previousState: Array<T>;
+}
+
+function createStore<S>(state: S): Store<S> {
+  return {
+    state,
+    previousState: [state]
+  }
+}
+
+const myStore = createStore({
+  count: 1,
+  user: {
+    name: 'John',
+    isLoggedIn: true
+  }
+});
+
+myStore.state.count;
+myStore.state.user.name;
+myStore.state.user.isLoggedIn;
+myStore.state.user.age;

@@ -1,0 +1,43 @@
+let myStringVariable: string = 'Testing';
+
+myStringVariable = 1;
+
+let inlineObjectType: {a: string, b: number};
+
+inlineObjectType = {a: 'a string', b: 123};
+
+interface Person {
+  name: string;
+  age: number;
+  children: Person[];
+}
+
+const daniel: Person = {
+  name: 'Daniel Figueiredo',
+  age: 29,
+  children: []
+};
+
+function personFactory(
+  name: string,
+  age: number,
+  children: Person[]
+): Person {
+  return {
+    name,
+    age,
+    children
+  };
+}
+
+const familyFactory = (
+  personFactory: (
+    name: string,
+    age: number,
+    children: Person[]
+  ) => Person
+): void => {
+  // function body, do something here!
+};
+
+familyFactory(personFactory);

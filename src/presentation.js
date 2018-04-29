@@ -15,10 +15,16 @@ import {
   arraySlideSet,
   eventLoopSlideSet
 } from './vanilla-js';
+import {
+  syntaxSlideSet,
+  genericsSlideSet
+} from './typescript';
+import { createEndSlide } from './end';
 
 // Require CSS
 require('normalize.css');
 
+// Define some Rangle common themes
 const theme = createTheme({
   primary: '#230e2d',
   secondary: '#e5373a',
@@ -44,6 +50,9 @@ export default class Presentation extends React.Component {
         { closureSlideSet() }
         { callbackSlideSet() }
         { arraySlideSet() }
+        { syntaxSlideSet() }
+        { genericsSlideSet() }
+        { createEndSlide() }
       </Deck>
     );
   }

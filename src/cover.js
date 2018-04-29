@@ -63,9 +63,9 @@ export const createGitSummarySlide = () =>
       Typescript
     </Heading>
     <List textColor="gray" fit>
-      <ListItem>Arguments type</ListItem>
-      <ListItem>Returning type</ListItem>
-      <ListItem>Generic argument</ListItem>
+      <ListItem>Typing variables</ListItem>
+      <ListItem>Typing functions</ListItem>
+      <ListItem>Generic arguments</ListItem>
     </List>
   </Slide>;
 
