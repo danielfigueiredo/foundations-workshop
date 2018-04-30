@@ -51,6 +51,8 @@ const createSpreadOperatorsExampleSlide = () =>
       { loc: [28, 29], title: 'false', note: 'Although they have the same properties, they are different objects' },
       { loc: [30, 36], title: '{a: \'aa\', b: \'b\', c: true, d: 1}', note: 'Note that we can override and add new properties' },
       { loc: [37, 45], title: 'nested object spread', note: '{c: true, d: 1, oldObj: { a: \'aaa\', b: \'b\' }}' },
+      { loc: [25, 26], note: 'The generic argument in an Observable represents the shape of its value' },
+      { loc: [27, 29], note: 'The generic argument in an Array represents the shape of each element' },
     ]}
   />;
 

@@ -22,3 +22,8 @@ myStore.state.count;
 myStore.state.user.name;
 myStore.state.user.isLoggedIn;
 myStore.state.user.age;
+
+const personStream: Observable<Person>;
+
+const arrayOfDogs: Array<Dog>;
+const arrayOfDogs: Dog[];
